@@ -14,9 +14,11 @@ class CreateBeritaAcara extends Migration
     public function up()
     {
         Schema::create('berita_acara', function (Blueprint $table) {
-            $table->integer('id_berita_acara');
-            $table->integer('id_kelurahan');
-            $table->binary('berita_acara');
+            $table->integer('ba_id');
+            $table->integer('kelurahan_id');
+            $table->string('periode');
+            $table->integer('total_usulan');
+            $table->integer('total_perbaikan');
             $table->timestamps();
         });
     }

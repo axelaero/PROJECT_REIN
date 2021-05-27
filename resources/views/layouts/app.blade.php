@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Posty</title>
+    <title>Bantuan Sosial</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 <body class="bg-gray-200">
@@ -17,7 +17,7 @@
                 <a href="{{ route('dashboard') }}" class="p-3">Dashboard</a>
             </li>
         @endauth
-            <li>
+            <!-- <li>
                 <a href="" class="p-3">Dinas</a>
             </li>
             <li>
@@ -25,8 +25,13 @@
             </li>
             <li>
                 <a href="" class="p-3">Admin</a>
+            </li> -->
+            <li>
+            <a href="/" class="p-3">Web Bantuan Sosial</a>
             </li>
         </ul>
+        
+        
         <!-- <ul class="flex items-center">
             @auth
                 <li>

@@ -14,8 +14,13 @@ class CreateKelurahan extends Migration
     public function up()
     {
         Schema::create('kelurahan', function (Blueprint $table) {
-            $table->integer('id_kelurahan')->unique();
-            $table->string('nama_kelurahan')->unique();
+            $table->integer('kelurahan_id')->unique();
+            $table->string('kelurahan_nama')->unique();
+            $table->string('kelurahan_alamat');
+            $table->integer('kelurahan_telepon');
+            $table->integer('kelurahan_kodepos');
+            $table->string('kecamatan_nama');
+            $table->string('jumlah_rw');
             $table->timestamps();
         });
     }

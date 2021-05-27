@@ -10,7 +10,11 @@
 
             @endif
 
-            Dashboard Dinas
+            Dashboard Kelurahan - 
+                <?php
+                $value = Session::get('username');
+                ?>
+                {{$value}}
         </div>
     </div>
 @endsection

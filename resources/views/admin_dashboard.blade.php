@@ -10,7 +10,11 @@
 
             @endif
 
-            Dashboard Admin
+            Dashboard Admin - 
+                <?php
+                $value = Session::get('username');
+                ?>
+                {{$value}}
         </div>
     </div>
 @endsection

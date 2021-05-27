@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateStatusPenduduk extends Migration
+class UpdateKelurahan extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class CreateStatusPenduduk extends Migration
      */
     public function up()
     {
-        Schema::create('penduduk_status', function (Blueprint $table) {
-            $table->id();
-            $table->string('deskripsi');
-            $table->timestamps();
+        Schema::table('kelurahan', function (Blueprint $table) {
+            $table->string('kelurahan_telepon')->change();
+            $table->string('kelurahan_kodepos')->change();
         });
     }
 
@@ -27,6 +26,6 @@ class CreateStatusPenduduk extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('status_penduduk');
+        //
     }
 }

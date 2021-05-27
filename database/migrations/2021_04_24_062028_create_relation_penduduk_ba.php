@@ -13,10 +13,10 @@ class CreateRelationPendudukBa extends Migration
      */
     public function up()
     {
-        Schema::create('relation_penduduk_ba', function (Blueprint $table) {
+        Schema::create('relasi_pdk_ba', function (Blueprint $table) {
             $table->id();
-            $table->integer('nik');
-            $table->integer('id_berita_acara');
+            $table->integer('pdk_id');  //penduduk id, bukan nik
+            $table->integer('ba_id');   //berita acara id
             $table->timestamps();
         });
     }

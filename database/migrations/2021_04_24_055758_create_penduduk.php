@@ -15,13 +15,16 @@ class CreatePenduduk extends Migration
     {
         Schema::create('penduduk', function (Blueprint $table) {
             $table->id();
-            $table->integer('nik')->unique();
-            $table->integer('id_bdt')->unique(); //sudah dapat bantuan atau belum nya
-            $table->string('nama');
-            $table->string('alamat');
-            $table->integer('status');
-            $table->string('deskripsi');
-            $table->integer('id_kelurahan');
+            $table->integer('penduduk_nik'); //TIDAK UNIQUE KARENA ORANG DAPAT DAFTAR > 1 KALI
+            $table->integer('penduduk_kk');
+            $table->integer('penduduk_id_bdt')->nullable(); //sudah dapat bantuan atau belum nya
+            $table->string('penduduk_nama');
+            $table->string('penduduk_alamat');
+            $table->integer('penduduk_status')->nullable();
+            $table->string('penduduk_deskripsi');
+            $table->string('periode');
+            $table->integer('kelurahan_id');
+            $table->integer('approved_status')->nullable();
             $table->timestamps();
         });
     }

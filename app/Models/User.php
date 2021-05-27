@@ -23,4 +23,5 @@ class User extends Authenticatable
         'id_kelurahan',
     ];
 
+    protected $table = 'users';
 }

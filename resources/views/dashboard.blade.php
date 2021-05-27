@@ -10,7 +10,11 @@
 
             @endif
 
-            Dashboard Kelurahan
+            Dashboard 
+                <?php
+                $value = Session::get('username');
+                ?>
+                {{$value}}
         </div>
     </div>
 @endsection

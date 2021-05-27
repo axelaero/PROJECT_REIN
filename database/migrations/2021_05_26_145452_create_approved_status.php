@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class UpdateUsersTable extends Migration
+class CreateApprovedStatus extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class UpdateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->integer('id_kelurahan')->nullable()->change();
+        Schema::create('approved_status', function (Blueprint $table) {
+            $table->id();
+            $table->string('deskripsi');
+            $table->timestamps();
         });
     }
 
@@ -25,6 +27,6 @@ class UpdateUsersTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('approved_status');
     }
 }
